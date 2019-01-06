@@ -30,4 +30,10 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 
 ### Note about ES6
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScrip
+
+#### 使用步骤
+1.安装python （如果已安装好就不用安装了）
+2. 进入项目根目录 运行命令行提示符
+3.输入python -m http.server 8000
+4.打开浏览器输入localhost:8000

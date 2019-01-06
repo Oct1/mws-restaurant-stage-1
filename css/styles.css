@@ -121,6 +121,7 @@ nav h1 a {
   margin: 0 20px;
   min-width: 100px;
 }
+
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
@@ -206,13 +207,31 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 1000;
 
+}
+.inside #map-container {
+  background: blue none repeat scroll 0 0;
+  height: calc(100% - 80px);
+  position: fixed;
+  right: 0;
+  top: 130px;
+  width: calc(50% - 50px);
 }
 
 .inside #map {
   background-color: #ccc;
+  height:100%;
   width: 100%;
+}
+
+.inside #footer {
+  bottom: 0;
+  position: absolute;
+  width: 50%;
 }
 
 #restaurant-name {
@@ -245,11 +264,10 @@ nav h1 a {
 	width: 90%;
 }
 #restaurant-container, #reviews-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
+  padding: 140px 40px 30px;
+  width: 50%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -264,9 +282,6 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #reviews-list li {
   background-color: #fff;
@@ -287,16 +302,35 @@ nav h1 a {
   color: #666;
 }
 
-#restaurant-hours {
-  align-items: flex-start;
+@media screen and (max-width:1024px){
+  .inside #map-container {
+    height: 400px;
+    width: 100%;
+    background-color: #ccc;
+    top: 131px;
+    position: relative;
+  }
+  #restaurant-container, #reviews-container {
+    width: 100%;
+  }
+  #breadcrumb {
+    width: 100%;
+  }
+  .inside #footer {
+    width: 100%;
+  }
 }
-#maincontent-top {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width:900px)  { 
-  #maincontent-top {
-    flex-direction: row-reverse;
+@media screen and (max-width:360px){
+  nav h1 a {
+    letter-spacing: 5px;
+  }
+  #restaurant-container, #reviews-container {
+    padding-left:20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  #footer{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
